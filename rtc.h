@@ -38,6 +38,22 @@ public:
 		return *this;
 	}
 
+	tuple operator-() {
+		x = -x;
+		y = -y;
+		z = -z;
+		w = -w;
+		return *this;
+	}
+
+	tuple operator*(float a) {
+		x *= a;
+		y *= a;
+		z *= a;
+		w *= a;
+		return *this;
+	}
+
 	bool operator==(const tuple& a) const {
 		return (x == a.x && y == a.y && z == a.z && w == a.w);
 	}
