@@ -95,3 +95,8 @@ TEST_CASE("multiplying a tuple by a fraction") {
 }
 
 
+TEST_CASE("dividing a tuple by a scalar") {
+	tuple a = tuple(1, -2, 3, -4);
+
+	REQUIRE(a / 2 == tuple(0.5, -1, 1.5, -2));
+}
