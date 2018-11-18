@@ -22,7 +22,7 @@ public:
 		return w == 0.0;
 	}
 
-	tuple operator+(tuple a) {
+	inline tuple operator+(tuple a) {
 		x += a.x;
 		y += a.y;
 		z += a.z;
@@ -30,7 +30,7 @@ public:
 		return *this;
 	}
 
-	tuple operator-(tuple a) {
+	inline tuple operator-(tuple a) {
 		x -= a.x;
 		y -= a.y;
 		z -= a.z;
@@ -38,7 +38,7 @@ public:
 		return *this;
 	}
 
-	tuple operator-() {
+	inline tuple operator-() {
 		x = -x;
 		y = -y;
 		z = -z;
@@ -46,7 +46,7 @@ public:
 		return *this;
 	}
 
-	tuple operator*(float a) {
+	inline tuple operator*(float a) {
 		x *= a;
 		y *= a;
 		z *= a;
@@ -54,7 +54,7 @@ public:
 		return *this;
 	}
 
-	tuple operator/(float a) {
+	inline tuple operator/(float a) {
 		x /= a;
 		y /= a;
 		z /= a;
@@ -62,24 +62,24 @@ public:
 		return *this;
 	}
 
-	bool operator==(const tuple& a) const {
+	inline bool operator==(const tuple& a) const {
 		return (x == a.x && y == a.y && z == a.z && w == a.w);
 	}
 };
 
-tuple point(float x, float y, float z) {
+inline tuple point(float x, float y, float z) {
 	return tuple(x, y, z, 1.0);
 }
 
-tuple vector(float x, float y, float z) {
+inline tuple vector(float x, float y, float z) {
 	return tuple(x, y, z, 0.0);
 }
 
-bool equal(float a, float b) {
+inline bool equal(float a, float b) {
 	return (abs(a - b) < EPSILON);
 }
 
-float magnitude(tuple t) {
+inline float magnitude(tuple t) {
 	return sqrt(t.x*t.x + t.y*t.y + t.z*t.z + t.w*t.w);
 }
 
