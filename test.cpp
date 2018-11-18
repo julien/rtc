@@ -100,3 +100,33 @@ TEST_CASE("dividing a tuple by a scalar") {
 
 	REQUIRE(a / 2 == tuple(0.5, -1, 1.5, -2));
 }
+
+TEST_CASE("computing the magnitude of vector(1, 0, 0)") {
+	tuple v = vector(1, 0, 0);
+
+	REQUIRE(magnitude(v) == 1);
+}
+
+TEST_CASE("computing the magnitude of vector(0, 1, 0)") {
+	tuple v = vector(0, 1, 0);
+
+	REQUIRE(magnitude(v) == 1);
+}
+
+TEST_CASE("computing the magnitude of vector(0, 0, 1)") {
+	tuple v = vector(0, 0, 1);
+
+	REQUIRE(magnitude(v) == 1);
+}
+
+TEST_CASE("computing the magnitude of vector(1, 2, 3)") {
+	tuple v = vector(1, 2, 3);
+
+	REQUIRE(equal(magnitude(v), sqrt(14)));
+}
+
+TEST_CASE("computing the magnitude of vector(-1, -2, -3)") {
+	tuple v = vector(-1, -2, -3);
+
+	REQUIRE(equal(magnitude(v), sqrt(14)));
+}
