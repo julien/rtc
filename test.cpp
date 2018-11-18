@@ -75,3 +75,23 @@ TEST_CASE("subtracting a vector from the zero vector") {
 
 	REQUIRE(zero - v == vector(-1, 2, -3));
 }
+
+TEST_CASE("negating a tuple") {
+	tuple a = tuple(1, -2, 3, -4);
+
+	REQUIRE(-a == tuple(-1, 2, -3, 4));
+}
+
+TEST_CASE("multiplying a tuple by a scalar") {
+	tuple a = tuple(1, -2, 3, -4);
+
+	REQUIRE(a * 3.5 == tuple(3.5, -7, 10.5, -14));
+}
+
+TEST_CASE("multiplying a tuple by a fraction") {
+	tuple a = tuple(1, -2, 3, -4);
+
+	REQUIRE(a * 0.5 == tuple(0.5, -1, 1.5, -2));
+}
+
+
