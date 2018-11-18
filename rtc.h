@@ -75,9 +75,12 @@ tuple vector(float x, float y, float z) {
 	return tuple(x, y, z, 0.0);
 }
 
-
 bool equal(float a, float b) {
 	return (abs(a - b) < EPSILON);
+}
+
+float magnitude(tuple t) {
+	return sqrt(t.x*t.x + t.y*t.y + t.z*t.z + t.w*t.w);
 }
 
 
