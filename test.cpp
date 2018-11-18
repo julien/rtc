@@ -61,3 +61,17 @@ TEST_CASE("substracting a vector from a point") {
 
 	REQUIRE(a1 == a2);
 }
+
+TEST_CASE("subtracting two vectors") {
+	tuple v1 = vector(3, 2, 1);
+	tuple v2 = vector(5, 6, 7);
+
+	REQUIRE(v1 - v2 == vector(-2, -4, -6));
+}
+
+TEST_CASE("subtracting a vector from the zero vector") {
+	tuple zero = vector(0, 0, 0);
+	tuple v = vector(1, -2, 3);
+
+	REQUIRE(zero - v == vector(-1, 2, -3));
+}
