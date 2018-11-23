@@ -83,4 +83,12 @@ inline float magnitude(tuple t) {
 	return sqrt(t.x*t.x + t.y*t.y + t.z*t.z + t.w*t.w);
 }
 
+inline tuple normalize(tuple t) {
+	float m = magnitude(t);
 
+	return tuple(
+			t.x / m,
+			t.y / m,
+			t.z / m,
+			t.w / m);
+}

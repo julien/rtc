@@ -131,3 +131,15 @@ TEST_CASE("Computing the magnitude of vector(-1, -2, -3)") {
 	REQUIRE(equal(magnitude(v), sqrt(14)));
 }
 
+TEST_CASE("Normalizing vector(4, 0, 0) gives (1, 0, 0)") {
+	tuple v = vector(4, 0, 0);
+
+	REQUIRE(normalize(v) == vector(1, 0, 0));
+}
+
+TEST_CASE("The magnitude of normalizing vector(1, 2, 3)") {
+	tuple v = vector(1, 2, 3);
+	tuple n = normalize(v);
+
+	REQUIRE(equal(magnitude(n), 1.0f));
+}
