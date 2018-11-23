@@ -143,3 +143,10 @@ TEST_CASE("The magnitude of normalizing vector(1, 2, 3)") {
 
 	REQUIRE(equal(magnitude(n), 1.0f));
 }
+
+TEST_CASE("The dot product of two tuples") {
+	tuple a = vector(1, 2, 3);
+	tuple b = vector(2, 3, 4);
+
+	REQUIRE(dot(a, b) == 20.f);
+}

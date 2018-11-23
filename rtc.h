@@ -92,3 +92,10 @@ inline tuple normalize(tuple t) {
 			t.z / m,
 			t.w / m);
 }
+
+inline float dot(tuple a, tuple b) {
+	return a.x * b.x +
+		a.y * b.y +
+		a.z * b.z +
+		a.w * b.w;
+}
