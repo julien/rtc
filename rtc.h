@@ -99,3 +99,10 @@ inline float dot(tuple a, tuple b) {
 		a.z * b.z +
 		a.w * b.w;
 }
+
+inline tuple cross(tuple a, tuple b) {
+	return vector(
+			a.y * b.z - a.z * b.y,
+			a.z * b.x - a.x * b.z,
+			a.x * b.y - a.y * b.x);
+}
