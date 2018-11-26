@@ -76,7 +76,7 @@ inline tuple vector(float x, float y, float z) {
 }
 
 inline bool equal(float a, float b) {
-	return (abs(a - b) < EPSILON);
+	return (std::abs(a - b) < EPSILON);
 }
 
 inline float magnitude(tuple t) {
