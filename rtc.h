@@ -65,6 +65,11 @@ public:
 	inline bool operator==(const tuple& a) const {
 		return (x == a.x && y == a.y && z == a.z && w == a.w);
 	}
+
+	inline bool operator<=(float a) {
+		return (x <= a && y <= a && z <= a);
+	}
+
 };
 
 inline tuple point(float x, float y, float z) {
